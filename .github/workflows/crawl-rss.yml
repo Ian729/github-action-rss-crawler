@@ -1,7 +1,7 @@
 on:
   schedule:
-    # Runs every 4h
-    - cron: '0 */4 * * *'
+    # Runs every 4:00
+    - cron: '0 4 * * *'
   workflow_dispatch:
   
 jobs:
@@ -18,8 +18,8 @@ jobs:
           dotnet-version: 3.1.x
       #- run: dotnet build DemoApp\DemoApp.sln      
       - run: dotnet run --project RssCrawler\RssCrawler.csproj
-      - run: git config --local user.email "it.minhhung@gmail.com"
-      - run: git config --local user.name "Jin"
+      - run: git config --local user.email "438410248@qq.com"
+      - run: git config --local user.name "Ian729"
       - run: git add .
       - run: git commit -m "Add changes"
       - run: git push
